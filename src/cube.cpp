@@ -3,7 +3,7 @@
 #include <SFML/OpenGL.hpp>
 #include "texture_manager.h"
 
-#include <glm/gtx/string_cast.hpp>
+#include "utils.h"
 
 namespace Mutiny {
     Cube::Cube(const std::string& texture_name){
@@ -89,6 +89,10 @@ namespace Mutiny {
 
     void Cube::update(float delta_time) {
         GameObject::update(delta_time);
+        particle.integrate(delta_time, position);
+
+
+            
 
     }
 

@@ -1,4 +1,6 @@
 #include "utils.h"
+#include <glm/gtx/string_cast.hpp>
+#include <iostream>
 
 namespace Mutiny {
 
@@ -23,6 +25,12 @@ namespace Mutiny {
 
 
         return results;
+    }
+
+
+    void print(glm::vec3& vec) {
+        std::cout << glm::to_string(vec) << "\n";
+
     }
 
 }

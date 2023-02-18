@@ -4,6 +4,7 @@
 
 #include "game_object.h"
 #include "shader.h"
+#include "cyclone/particle.h"
 
 namespace Mutiny {
     struct Cube : GameObject {
@@ -17,6 +18,8 @@ namespace Mutiny {
 
         unsigned int texture_id;
         bool using_texture;
+
+        cyclone::Particle particle;
 
 
     };

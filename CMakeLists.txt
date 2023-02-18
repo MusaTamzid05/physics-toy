@@ -18,6 +18,8 @@ set(
     src/cube.cpp
     src/plane.cpp
 
+    src/cyclone/particle.cpp
+
 
     src/texture_manager.cpp
 
