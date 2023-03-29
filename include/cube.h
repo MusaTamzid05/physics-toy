@@ -13,6 +13,8 @@ namespace Mutiny {
         void update(float delta_time);
         void render();
 
+
+
         unsigned int VAO;
         unsigned int VBO;
 
@@ -20,6 +22,7 @@ namespace Mutiny {
         bool using_texture;
 
         cyclone::Particle particle;
+
 
 
     };

@@ -5,6 +5,7 @@
 #include "texture_manager.h"
 
 namespace Demo {
+
     SimpleScene::SimpleScene(const std::string& title, int width, int height):Scene(title, width, height){
         Mutiny::TextureManager::get_instance()->add("../textures/container.jpg", "container");
         Mutiny::TextureManager::get_instance()->add("../textures/wall.jpg", "wall");
@@ -13,6 +14,12 @@ namespace Demo {
         cube->position = glm::vec3(0.0f, 0.0f, 0.0f);
 
         game_objects.push_back(cube);
+
+
+        cyclone::ParticleGravity* particleGravity = new cyclone::ParticleGravity();
+        particle_registry.add(&cube->particle, particleGravity);
+
+
 
     }
 }

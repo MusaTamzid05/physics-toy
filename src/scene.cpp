@@ -105,8 +105,12 @@ namespace  Mutiny {
 
         while(accumulator >= TIME_STEP) {
             Camera::get_instance()->update(TIME_STEP);
-            for(GameObject* game_object : game_objects)
+            particle_registry.update_forces(delta_time);
+
+            for(GameObject* game_object : game_objects) {
                 game_object->update(delta_time);
+
+            }
 
             accumulator -= TIME_STEP;
         }

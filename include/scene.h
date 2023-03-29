@@ -9,6 +9,9 @@
 #include <chrono>
 #include "game_object.h"
 
+
+#include "cyclone/pfgen.h"
+
 namespace Mutiny {
     struct Scene {
         Scene(const std::string& title, int width = 1024, int height = 768);
@@ -33,6 +36,10 @@ namespace Mutiny {
 
         std::chrono::time_point<std::chrono::system_clock> previous_time;
         float accumulator;
+
+        cyclone::ParticleForceRegistry particle_registry;
+
+
     };
 }
 

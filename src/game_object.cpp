@@ -28,6 +28,8 @@ namespace Mutiny {
             shader->setMat4("view", Camera::get_instance()->get_view_matrix());
 
         }
-
     }
+
+
+
 }

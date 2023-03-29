@@ -19,6 +19,7 @@ set(
     src/plane.cpp
 
     src/cyclone/particle.cpp
+    src/cyclone/pfgen.cpp
 
 
     src/texture_manager.cpp

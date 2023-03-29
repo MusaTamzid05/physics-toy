@@ -8,7 +8,7 @@ namespace cyclone {
         Particle(float dumping = 0.95f);
         virtual ~Particle() {}
 
-        void integrate(float duration, glm::vec3& position);
+        glm::vec3 integrate(float duration, glm::vec3& position);
 
         glm::vec3 velocity;
         glm::vec3 acceleration;
@@ -18,6 +18,7 @@ namespace cyclone {
         float dumping;
 
     };
+
 }
 
 #endif

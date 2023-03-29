@@ -5,6 +5,8 @@
 
 #include "utils.h"
 
+#include <glm/gtx/string_cast.hpp>
+
 namespace Mutiny {
     Cube::Cube(const std::string& texture_name){
         float vertices[] = {
@@ -88,8 +90,9 @@ namespace Mutiny {
     }
 
     void Cube::update(float delta_time) {
+        position = particle.integrate(delta_time, position);
         GameObject::update(delta_time);
-        particle.integrate(delta_time, position);
+
 
 
             
@@ -113,4 +116,5 @@ namespace Mutiny {
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
     }
+
 }
